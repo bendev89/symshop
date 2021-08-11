@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Template Name
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Template default CSS
+
+-----------------------------------------------------------------------------------*/
+/*----------------------------------------*/
+/*  01. Template default CSS
+/*----------------------------------------*/
+/*-- Google Font --*/
+@import "./scss/variabls";
+@import "./scss/common";
+@import "./scss/header";
+@import "./scss/hero";
+@import "./scss/footer";
+@import "./scss/responsive-class";
+@import "./scss/shop";
+@import "./scss/about";
+@import "./scss/contact";
+@import "./scss/component";
+@import "./scss/search-modal";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "Pe-icon-7-stroke";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke.ttf");
+}
+@font-face {
+  font-family: "fontAwesome";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/fontAwesome/fontawesome-webfont.ttf");
+}
+
+$primary: #eaaa85;
