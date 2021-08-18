@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Password Reset Email Sent{% endblock %}
+
+{% block body %}
+<div class="breadcrumb-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-center">
+                    <h2 class="breadcrumb-title">Email envoyé</h2>
+                    <!-- breadcrumb-list start -->
+                    {# <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Login</li>
+                    </ul> #}
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="login-register-area pt-100px pb-100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                    <div class="login-register-wrapper">
+                        <div class="login-register-tab-list nav">
+                            {# <a class="active" data-bs-toggle="tab" href="#lg1">
+                            </a>
+                            <a data-bs-toggle="tab" href="#lg2"> #}
+                           {# <h4>register</h4> #}
+
+                        </div>
+                        {# <div class="tab-content"> #}
+                            <div id="lg2" class="tab-pane">
+                                <div class="login-form-container">
+                                    <div class="login-register-form">
+
+
+                                        {# <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1> #}
+                                            <p>
+                                                If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+                                                This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+                                            </p>
+                                            <p>If you don't receive an email please check your spam folder or <a href="{{ path('app_forgot_password_request') }}">try again</a>.</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+{% endblock %}

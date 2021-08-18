@@ -130,7 +130,7 @@
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
                                         class="pe-7s-users"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="my-account.html">Mon Compte</a></li>
+                                    <li><a class="dropdown-item" href="{{path('account')}}">Mon Compte</a></li>
                                     <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
                                     <li>{% if app.user %}<a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a>
                                         {% else %} <a class="dropdown-item" href="{{path('app_login')}}">Connexion</a>

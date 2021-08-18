@@ -61,7 +61,9 @@
                                                 <button type="submit"><span>Connexion</span></button>
                                         </div>
                                          </form>
-                                        <span>Vous n'avez pas encore de compte ?</span><a href="{{path('register')}}">Inscrivez-vous</a>
+
+                                        <span>Mot de passe oublié ?</span><a href="{{path('app_forgot_password_request')}}">Réinitialisez-le</a>
+                                        <span>Vous n'avez pas encore de compte ?</span><a href="{{path('app_register')}}">Inscrivez-vous</a>
 
                                     </div>
                                 {% endif %}
