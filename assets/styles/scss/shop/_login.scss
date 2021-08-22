@@ -53,7 +53,8 @@
     padding: 80px;
     text-align: left;
     .login-register-form {
-      input {
+      input,
+      select {
         background-color: transparent;
         border: 1px solid #ebebeb;
         color: $body-color;
@@ -65,6 +66,9 @@
         &:focus {
           border-color: $theme-color;
         }
+      }
+      select {
+        height: 50px;
       }
       .cgu {
         display: flex;

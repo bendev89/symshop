@@ -113,18 +113,41 @@
                         </div>
                         <div class="tab-pane" id="address">
                             <p>The following addresses will be used on the checkout page by default.</p>
-                            <h5 class="billing-address">Billing address</h5>
-                            <a href="#" class="view">Edit</a>
-                            <p class="mb-2"><strong>Michael M Hoskins</strong></p>
+
+                            <h5 class="billing-address">Vos addresses</h5>
+                            <div class="save_button mt-3">
+                                    <a href="{{path('address_new')}}" class="btn btn-primary" >Ajouter une addresse</a>
+                            </div>
+                            <div class="row">
+                            {% if app.user.addresses %}
+                                {% set index = 0 %}
+                                {% for address in app.user.addresses %}
+                                {% set index = index + 1 %}
+                                <div class="address-card col-lg-5 m-2">
+                                <h3>Adresse #{{index}}</h3>
+
+                                <p class="mb-2"><strong>{{address.fullName}}</strong></p>
                             <address>
-                                <span class="mb-1 d-inline-block"><strong>City:</strong> Seattle</span>,
+                                <span class="mb-1 d-inline-block"><strong>Adresse: </strong> {{address.address}}</span>,
                                 <br>
-                                <span class="mb-1 d-inline-block"><strong>State:</strong> Washington(WA)</span>,
+                                <span class="mb-1 d-inline-block"><strong>Code Postal: </strong>{{address.PostalCode}}</span>,
                                 <br>
-                                <span class="mb-1 d-inline-block"><strong>ZIP:</strong> 98101</span>,
+                                <span class="mb-1 d-inline-block"><strong>Ville: </strong> {{address.city}}</span>,
                                 <br>
-                                <span><strong>Country:</strong> USA</span>
+                                <span><strong>Pays: </strong>{{address.country}}</span>
                             </address>
+                                <div class="address-actions">
+                                <a href="{{path('address_edit', {'id': address.id})}}" class="btn btn-warning">Modifier</a>
+                                {% include "address/_delete_form.html.twig" %}
+                                </div>
+                            </div>
+
+                                {% endfor %}
+                            {% else %}
+                                <p>Vous n'avez pas encore ajouté d'addresses</p>
+                            {% endif %}
+                            </div>
+
                         </div>
                         <div class="tab-pane fade" id="account-details">
                             <h3>Account details </h3>

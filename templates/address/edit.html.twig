@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Address{% endblock %}
+
+{% block body %}
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-center">
+                    <h2 class="breadcrumb-title">Ajouter une addresse</h2>
+                    <!-- breadcrumb-list start -->
+                    {# <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Login</li>
+                    </ul> #}
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="login-register-area pt-100px pb-100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                    <div class="login-register-wrapper">
+                        <div class="login-register-tab-list nav">
+
+                        </div>
+                        {# <div class="tab-content"> #}
+                            <div id="lg2" class="tab-pane">
+                                <div class="login-form-container">
+                                    <div class="login-register-form">
+                                        {{ include('address/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+                                        <a href="{{ path('account') }}">Retour à la liste des addresses</a>
+
+                                        {{ include('address/_delete_form.html.twig') }}
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+{% endblock %}
