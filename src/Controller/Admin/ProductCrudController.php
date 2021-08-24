@@ -28,9 +28,8 @@ class ProductCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('name'),
-            SlugField::new('slug')->setTargetFieldName('name')
-                                  ->hideOnForm()
-                                  ->hideOnIndex(),
+            SlugField::new('slug')->setTargetFieldName('name')->hideOnIndex(),
+
             TextEditorField::new('description'),
             TextEditorField::new('information')->hideOnIndex(),
             MoneyField::new('price')->setCurrency('EUR'),
