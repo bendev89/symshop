@@ -31,4 +31,17 @@ class HomeController extends AbstractController
             'specialOffer' => $specialOfferProducts
         ]);
     }
+    /**
+     * @Route("/product/{slug}", name="product_show")
+     */
+    public function show(?Product $product): Response
+    {
+        if (!$product) {
+            return $this->redirectToRoute('home');;
+        }
+
+        return $this->render('home/show_product.html.twig', [
+            'product' => $product
+        ]);
+    }
 }
